@@ -10,6 +10,8 @@ import java.util.Random;
 /**
  * Airline Reservation Main program.
  * @author Roarke Schafer
+ * @assignment CSCI3307 Final Project
+ * @date 12/8/2019
  */
 public class AirplaneRegister {
 
@@ -31,7 +33,7 @@ public class AirplaneRegister {
         flight.flightSeatingChart.get(0).reserveSeat("A3", "Roarke Schafer");
         flight.flightSeatingChart.get(0).reserveSeat("C1", "Roarke Schafer");
         flight.flightSeatingChart.get(0).reserveSeat("F2", "Roarke Schafer");
-        for(int i = 0; i <  20; i++)
+        for(int i = 0; i <  19; i++)
         {
             flight.flightSeatingChart.get(1).ceateSeat(rand.nextInt(100) + 100);
         }
@@ -45,6 +47,7 @@ public class AirplaneRegister {
         
         flight.flightSeatingChart.get(0).printClassData();
         flight.flightSeatingChart.get(1).printClassData();
+        
         flight.flightSeatingChart.get(0).printRowPicture();
         flight.flightSeatingChart.get(1).printRowPicture();
     }

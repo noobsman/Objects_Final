@@ -5,11 +5,12 @@
  */
 package airplaneregister;
 
-import static java.awt.PageAttributes.MediaType.A;
 import java.util.ArrayList;
 /**
- *
- * @author Roarke
+ * Seating class used to separate other seating classes with there own seats.
+ * @author Roarke Schafer
+ * @assignment CSCI3307 Final Project
+ * @date 12/8/2019
  */
 public class SeatingClass {
     private static String[] rows = {"A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z",""};
@@ -18,7 +19,10 @@ public class SeatingClass {
     private ArrayList<Seat> seatingChart;
     private int column;
     private int capacity;
-
+    
+    /**
+     * Default constructor for SeatingClass
+     */
     SeatingClass()
     {
         className = "";
@@ -28,6 +32,12 @@ public class SeatingClass {
         capacity = 0;
     }
     
+    /**
+     * Main constructor for creating a SeatingClass
+     * @param name
+     * @param column
+     * @param maxCapacity 
+     */
     SeatingClass(String name, int column, int maxCapacity)
     {
         this.className = name;
@@ -121,16 +131,28 @@ public class SeatingClass {
         return null;
     }
     
+    /**
+     * returns the max capacity of the seating class.
+     * @return 
+     */
     public int getCapacityAmount()
     {
         return capacity;
     }
     
+    /**
+     * returns the number of seats reserved under the seating class.
+     * @return 
+     */
     public int getReservedAmount()
     {
         return flightNumberOfReserved;
     }
     
+    /**
+     * returns the name of the seating class.
+     * @return 
+     */
     public String getSeatingClass()
     {
         return className;
@@ -167,6 +189,9 @@ public class SeatingClass {
         }
     }
     
+    /**
+     * Prints out a grid picture of the plane seats into columns of seat Id.
+     */
     public void printRowPicture()
     {
         String currentRow = "";

@@ -10,6 +10,8 @@ import java.util.ArrayList;
 /**
  * The Flight Class holds array of seats and model of plane.
  * @author Roarke Scahfer
+ * @assignment CSCI3307 Final Project
+ * @date 12/8/2019
  */
 public class Flight {
 
@@ -52,7 +54,8 @@ public class Flight {
     public void createSeatingClass(String className, int columns, int capacity)
     {
         int currentCapacity = 0;
-        for (int i = 0; i < flightSeatingChart.size(); i++) {
+        for (int i = 0; i < flightSeatingChart.size(); i++) 
+        {
            SeatingClass seatClass = flightSeatingChart.get(i);
            currentCapacity += seatClass.getCapacityAmount();
         }
